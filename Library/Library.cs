@@ -59,6 +59,10 @@ namespace SharpKnP231.Library
                 ArtItem = "Пектораль",
                 Publisher = "Студія 'Лазер'"
             });
+            Funds.Add(new Poster(
+                "Екологія майбутнього", 
+                "Збереження природи"));
+
         }
 
         public void PrintCatalog()
@@ -98,6 +102,29 @@ namespace SharpKnP231.Library
             
             }
         }
+        public void PrintPrintable()
+        {
+            Console.WriteLine("Друковані фонди:\n");
+            foreach (var literature in Funds)
+            {
+                if (literature is not INonPrintable)
+                    Console.WriteLine(literature.GetCard());
+            }
+        }
+
+        public void PrintNonPrintable()
+        {
+            Console.WriteLine("\nНедруковані фонди:\n");
+            foreach (var literature in Funds)
+            {
+                if (literature is INonPrintable)
+                    Console.WriteLine(literature.GetCard());
+            }
+        }
+
+        
+        
+        
     }
 }
 /*

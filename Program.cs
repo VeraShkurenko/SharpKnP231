@@ -7,11 +7,13 @@ library.PrintCatalog();
 Console.WriteLine("---------Periodic-----------");
 library.PrintPeriodic();
 
-
 Console.WriteLine("\n---------NonPeriodic-----------");
 library.PrintNonPeriodic();
 
 Console.WriteLine("--------------------");
+
+library.PrintPrintable();
+library.PrintNonPrintable();
 
 return;
 void Task1()
